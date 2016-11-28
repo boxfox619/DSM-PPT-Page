@@ -1,0 +1,20 @@
+
+@font-face{
+	font-family: 'font-test';
+	src: url('BMHANNA_11yrs_ttf.ttf');
+}
+body{
+	font-family: 'font-test';
+	margin: 0;
+	scroll-behavior: smooth;
+}
+.title{
+	font-weight: bold;
+	font-size: 3rem;
+	text-align: center;
+}
+.block-bottom{
+	width: 20%;
+	height: 50%;
+	color: white;
+}
