@@ -8,9 +8,18 @@ body{
 	margin: 0;
 	scroll-behavior: smooth;
 }
+.title-pice{
+	font-size: 4.5rem;
+	margin:-7;
+}
 .title{
 	font-weight: bold;
-	font-size: 3rem;
+	font-size: 3.5rem;
+	text-align: center;
+}
+.title-sub{
+	font-weight: bold;
+	font-size: 2rem;
 	text-align: center;
 }
 .block-bottom{
