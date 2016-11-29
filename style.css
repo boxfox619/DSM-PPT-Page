@@ -16,6 +16,11 @@ html {
   width: 100%;
 }
 
+pre{
+	font-family: 'font-text';
+	font-weight: bold;
+}
+
 .snow {
   height: 100%;
   position: absolute;
@@ -26,15 +31,18 @@ html {
 	font-size: 4.5rem;
 	margin:-10px;
 }
+
 .title{
 	font-size: 3.5rem;
 	text-align: center;
 }
+
 .title-sub{
 	font-weight: bold;
 	font-size: 2rem;
 	text-align: center;
 }
+
 .block-bottom{
 	width: 20%;
 	height: 50%;
@@ -113,4 +121,22 @@ html {
 	position: relative;
 	top: 3.4vh;
 	left: 1vh;
+}
+.snowman-branch{
+	display: inline-block;
+	width: 5vh;
+	height: 0.5vh;
+	background-color: brown;
+	position: relative;
+	top : 2vh;
+}
+
+#left{
+	right: 3vh;
+	transform: rotate(20deg);
+}
+
+#right{
+	left: 7vh;
+	transform: rotate(-20deg);
 }
