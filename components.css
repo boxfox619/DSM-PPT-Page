@@ -1,0 +1,148 @@
+.world{
+  position: relative;
+  width: 85%;
+  height: 240px;
+  top: 32vh;
+  left: 50%;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+}
+.world div{
+  position: absolute;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 2px;
+}
+.world div::before, .world div::after{
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.stick{
+  width: 6px;
+  height: 32px;
+  bottom: 30px;
+  left: 0;
+  background-color: #fff;
+  border-radius: 3px;
+  animation: stick 20s linear infinite;
+}
+
+.stick div{
+  transform-origin: 50% 0%;
+  transform: translate(-3px, 1px);
+}
+
+.stick .left{
+  z-index: -1;
+}
+
+.stick .right{
+  z-index: 1 ;   
+}
+
+.stick .head{
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translate(-3px, -14px);
+}
+
+.stick .arm .bottom{
+  width: 4px;
+  height: 12px;
+  bottom: -10px;
+}
+
+.stick .leg .bottom{
+  width: 4px;
+  height: 15px;
+  bottom: -13px;
+}
+
+.stick .arm .left{
+  width: 4px;
+  height: 14px;
+  top: 1px;
+  left: 3px;
+  animation: run 0.8s linear infinite;
+}
+.stick .arm .left .bottom{
+  animation: arm-bottom 0.4s linear infinite;
+}
+
+.stick .arm .right{
+  width: 4px;
+  height: 14px;
+  top: 1px;
+  left: -2px;
+  animation: run 0.8s linear 0.4s infinite;
+}
+.stick .arm .right .bottom{
+  animation: arm-bottom 0.8s linear 0.8s infinite;
+}
+
+.stick .leg .left{
+  width: 4px;
+  height: 20px;
+  bottom: -50px;
+  left: 5px;
+  animation: run 0.8s linear infinite;
+}
+
+.stick .leg .left .bottom{
+  animation: leg-bottom 0.8s linear infinite;
+}
+
+.stick .leg .right{
+  width: 4px;
+  height: 20px;
+  bottom: -50px;
+  left: -1px;
+  animation: run 0.8s linear 0.4s infinite;
+}
+
+.stick .leg .right .bottom{
+  animation: leg-bottom 0.8s linear 0.4s infinite;
+}
+
+
+@keyframes run{
+  0%, 50%, 100%{
+    transform: rotate(0deg);
+  }
+  25%{
+    transform: rotate(60deg);
+  }
+  75%{
+    transform: rotate(-60deg);
+  }
+}
+
+@keyframes arm-bottom{
+  0%, 100%{
+    transform: rotate(0deg)
+  }
+  50%{
+    transform: rotate(-90deg)
+  }
+}
+@keyframes leg-bottom{
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(120deg);
+  }
+}
+
+@keyframes stick{
+  0%{
+    transform: translateX(-50px);
+  }
+  100%{
+    transform: translateX(1500px);
+  }
+}
