@@ -16,6 +16,10 @@ $(document).ready(function() {
                     }, 500, function() {
                     });
                 }
+                if(page==7){
+                    setTimeout(function(){  $('.property').toggleClass('build'); }, 2000);
+                   
+                }
                 event.preventDefault();
             }
         } else if (e.keyCode == 56) {
