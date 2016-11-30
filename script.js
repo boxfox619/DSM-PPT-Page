@@ -7,11 +7,13 @@ $(document).ready(function() {
         if (e.keyCode == 50) {
             if (page < numOfPage) {
                 page++;
+                if(page==5){
+                    $('#running-man').addClass('stick-moving');
+                }
                 if (this.hash !== "") {
                     $('html, body').animate({
                         scrollTop: $('#' + page).offset().top
                     }, 500, function() {
-
                     });
                 }
                 event.preventDefault();
