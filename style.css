@@ -105,6 +105,8 @@ pre{
 	position: relative;
 	top: 3vh;
 	left: 3vh;
+    animation: eyes-onoff 5s linear infinite;
+  animation-delay: 2s;
 }
 
 .right{
@@ -140,6 +142,18 @@ pre{
 #right{
 	left: 7vh;
 	transform: rotate(-20deg);
+}
+
+
+@keyframes eyes-onoff{
+  0%, 5%{
+  	top: 2.5vh;
+	height: 0.5vh;
+  }
+  6%{
+  	top: 3vh;
+	height: 2vh;
+  }
 }
 
 .moon{
