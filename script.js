@@ -8,6 +8,7 @@ $(document).ready(function() {
     $("body").keypress(function(e) {
         if (e.keyCode == 50) {
             if (page < numOfPage) {
+<<<<<<< HEAD
                 if(page==8&&carts8<1){
                     $('#building').animate({left: '40%'}, 1000);
                     $('#runner').animate({left: '40%'}, 1000);
@@ -15,42 +16,61 @@ $(document).ready(function() {
                     carts8++;
                 }else if(page==9&&carts9<5){
                     switch(carts9){
+=======
+                if (page == 9 && carts9 < 5) {
+                    switch (carts9) {
+>>>>>>> ce075495aa6e19fd53046a10ed6d3fbd90bb6385
                         case 0:
-                        $('#piechart1').animate({left: '20vh',top: '-2vh'}, 1000);
-                        $('#piechart1').find('svg rect:eq( 1 )').attr('fill-opacity','0.0');
-                        break;
+                            $('#piechart1').animate({
+                                left: '20vh',
+                                top: '-2vh'
+                            }, 1000);
+                            $('#piechart1').find('svg rect:eq( 1 )').attr('fill-opacity', '0.0');
+                            break;
                         case 1:
-                        $('#piechart2').animate({left: '90vh',top: '-2vh'}, 1000);
-                        $('#piechart2').find('svg rect:eq( 1 )').attr('fill-opacity','0.0');
-                        break;
+                            $('#piechart2').animate({
+                                left: '90vh',
+                                top: '-2vh'
+                            }, 1000);
+                            $('#piechart2').find('svg rect:eq( 1 )').attr('fill-opacity', '0.0');
+                            break;
                         case 2:
-                        $('#piechart3').animate({left: '-16vh', top: '45vh'}, 1000);
-                        $('#piechart3').find('svg rect:eq( 1 )').attr('fill-opacity','0.0');
-                        break;
+                            $('#piechart3').animate({
+                                left: '-16vh',
+                                top: '42vh'
+                            }, 1000);
+                            $('#piechart3').find('svg rect:eq( 1 )').attr('fill-opacity', '0.0');
+                            break;
                         case 3:
-                        $('#piechart4').animate({left: '41vh', top: '45vh'}, 1000);
-                        $('#piechart4').find('svg rect:eq( 1 )').attr('fill-opacity','0.0');
-                        break;
+                            $('#piechart4').animate({
+                                left: '50vh',
+                                top: '42vh'
+                            }, 1000);
+                            $('#piechart4').find('svg rect:eq( 1 )').attr('fill-opacity', '0.0');
+                            break;
                         case 4:
-                        $('#piechart5').animate({left: '92vh', top: '45vh'}, 1000);
-                        $('#piechart5').find('svg rect:eq( 1 )').attr('fill-opacity','0.0');
-                        break;
+                            $('#piechart5').animate({
+                                left: '105vh',
+                                top: '42vh'
+                            }, 1000);
+                            $('#piechart5').find('svg rect:eq( 1 )').attr('fill-opacity', '0.0');
+                            break;
                     }
                     carts9++;
-                }else{
+                } else {
                     page++;
-                    if(page==5){
+                    if (page == 5) {
                         $('#running-man').addClass('stick-moving');
                     }
                     if (this.hash !== "") {
                         $('html, body').animate({
                             scrollTop: $('#' + page).offset().top
-                        }, 500, function() {
-                        });
+                        }, 500, function() {console.log(page);});
                     }
-                    if(page==7){
-                        setTimeout(function(){  $('.property').toggleClass('build'); }, 2000);
-
+                    if (page == 7) {
+                        setTimeout(function() {
+                            $('.property').toggleClass('build');
+                        }, 1000);
                     }
                 }
                 event.preventDefault();
