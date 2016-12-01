@@ -19,8 +19,8 @@ function drawChart() {
             fontSize: 30
         },
         legend: {textStyle: {color: '#ffffff'}},
-        pieSliceText: 'label',
-        backgroundColor: "#1c1e1f"
+        pieSliceText: 'value',
+        backgroundColor: { fill:'transparent' }
     };
     var data2 = google.visualization.arrayToDataTable([
         ['Task', 'Hours per Day'],
@@ -36,8 +36,8 @@ function drawChart() {
             fontSize: 30
         },
         legend: {textStyle: {color: '#ffffff'}},
-        pieSliceText: 'label',
-        backgroundColor: "#1c1e1f"
+        pieSliceText: 'value',
+        backgroundColor: { fill:'transparent' }
     };
 
     var data3 = google.visualization.arrayToDataTable([
@@ -55,8 +55,8 @@ function drawChart() {
             fontSize: 30
         },
         legend: {textStyle: {color: '#ffffff'}},
-        pieSliceText: 'label',
-        backgroundColor: "#1c1e1f"
+        pieSliceText: 'value',
+        backgroundColor: { fill:'transparent' }
     };
 
     var data4 = google.visualization.arrayToDataTable([
@@ -68,15 +68,15 @@ function drawChart() {
     ]);
 
     var options4 = {
-        title: '하룻동안에 수업시간에 조는 횟수',
+        title: '하룻동안 수업시간에 조는 횟수',
         titleTextStyle: {
             color: "white",
             fontName: "font-test",
             fontSize: 30
         },
         legend: {textStyle: {color: '#ffffff'}},
-        pieSliceText: 'label',
-        backgroundColor: "#1c1e1f"
+        pieSliceText: 'value',
+        backgroundColor: { fill:'transparent' }
     };
 
     var data5 = google.visualization.arrayToDataTable([
@@ -94,8 +94,8 @@ function drawChart() {
             fontSize: 30
         },
         legend: {textStyle: {color: '#ffffff'}},
-        pieSliceText: 'label',
-        backgroundColor: "#1c1e1f"
+        pieSliceText: 'value',
+        backgroundColor: { fill:'transparent' }
     };
 
     var chart1 = new google.visualization.PieChart(document.getElementById('piechart1'));

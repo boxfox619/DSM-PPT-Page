@@ -219,7 +219,9 @@ pre{
 
 .piecharts{
 	position: relative;
-	left: 10%;
-	width: 100vw;
-	height: 100vh;
+	margin-right: -50%;
+	left: 150%;
+	width: 92vh;
+	height: 80vh;
+	float: left;
 }
