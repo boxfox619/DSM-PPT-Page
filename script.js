@@ -1,5 +1,6 @@
 $(document).ready(function() {
     var page = 1;
+    var carts8 = 0;
     var carts9 = 0;
 
     var numOfPage = $(".views").length;
@@ -7,7 +8,12 @@ $(document).ready(function() {
     $("body").keypress(function(e) {
         if (e.keyCode == 50) {
             if (page < numOfPage) {
-                if(page==9&&carts9<5){
+                if(page==8&&carts8<1){
+                    $('#building').animate({left: '40%'}, 1000);
+                    $('#runner').animate({left: '40%'}, 1000);
+                    $('#text-double').animate({left: '60vh'}, 1000);
+                    carts8++;
+                }else if(page==9&&carts9<5){
                     switch(carts9){
                         case 0:
                         $('#piechart1').animate({left: '20vh',top: '-2vh'}, 1000);
