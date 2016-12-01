@@ -1,4 +1,5 @@
-var canvas = document.getElementById('snow'),
+function swingtest(id){
+var canvas = document.getElementById(id),
     ctx = canvas.getContext('2d'),
     width = ctx.canvas.width = document.body.offsetWidth,
     height = ctx.canvas.height = document.body.offsetHeight,
@@ -72,3 +73,7 @@ function random(min, max) {
 
 createSnow(150);
 loop();
+}
+
+swingtest('snow');
+swingtest('snow2');
