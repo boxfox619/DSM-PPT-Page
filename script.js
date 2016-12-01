@@ -6,19 +6,23 @@ $(document).ready(function() {
     $("body").keypress(function(e) {
         if (e.keyCode == 50) {
             if (page < numOfPage) {
-                page++;
-                if(page==5){
-                    $('#running-man').addClass('stick-moving');
-                }
-                if (this.hash !== "") {
-                    $('html, body').animate({
-                        scrollTop: $('#' + page).offset().top
-                    }, 500, function() {
-                    });
-                }
-                if(page==7){
-                    setTimeout(function(){  $('.property').toggleClass('build'); }, 2000);
-                   
+                if(page==9){
+                    $('#piechart1').animate({left: '250px'}, 1000);
+                }else{
+                    page++;
+                    if(page==5){
+                        $('#running-man').addClass('stick-moving');
+                    }
+                    if (this.hash !== "") {
+                        $('html, body').animate({
+                            scrollTop: $('#' + page).offset().top
+                        }, 500, function() {
+                        });
+                    }
+                    if(page==7){
+                        setTimeout(function(){  $('.property').toggleClass('build'); }, 2000);
+
+                    }
                 }
                 event.preventDefault();
             }

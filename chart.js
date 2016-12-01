@@ -18,6 +18,7 @@ function drawChart() {
             fontName: "font-test",
             fontSize: 30
         },
+        legend: {textStyle: {color: '#ffffff'}},
         pieSliceText: 'label',
         backgroundColor: "#1c1e1f"
     };
@@ -34,6 +35,7 @@ function drawChart() {
             fontName: "font-test",
             fontSize: 30
         },
+        legend: {textStyle: {color: '#ffffff'}},
         pieSliceText: 'label',
         backgroundColor: "#1c1e1f"
     };
@@ -52,6 +54,7 @@ function drawChart() {
             fontName: "font-test",
             fontSize: 30
         },
+        legend: {textStyle: {color: '#ffffff'}},
         pieSliceText: 'label',
         backgroundColor: "#1c1e1f"
     };
@@ -71,6 +74,7 @@ function drawChart() {
             fontName: "font-test",
             fontSize: 30
         },
+        legend: {textStyle: {color: '#ffffff'}},
         pieSliceText: 'label',
         backgroundColor: "#1c1e1f"
     };
@@ -85,10 +89,11 @@ function drawChart() {
     var options5 = {
         title: '아침운동 시행 후 체력 변화',
         titleTextStyle: {
-            color: "white",
+            color: "#ffffff",
             fontName: "font-test",
             fontSize: 30
         },
+        legend: {textStyle: {color: '#ffffff'}},
         pieSliceText: 'label',
         backgroundColor: "#1c1e1f"
     };
