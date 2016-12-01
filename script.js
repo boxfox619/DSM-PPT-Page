@@ -54,7 +54,7 @@ $(document).ready(function() {
                     }
                     carts9++;
                 } else if(page==11&&carts11==0){
-                    dailyMissionTimer(0.20);
+                    dailyMissionTimer(0.30);
                     carts11++;
                 } else {
                     page++;
