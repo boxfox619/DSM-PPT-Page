@@ -105,6 +105,7 @@ pre{
 	position: relative;
 	top: 3vh;
 	left: 3vh;
+    animation: eyes-onoff 5s linear infinite;
 }
 
 .right{
@@ -123,6 +124,7 @@ pre{
 	top: 2.5vh;
 	left: 1.5vh;
 }
+
 .snowman-branch{
 	display: inline-block;
 	width: 5vh;
@@ -135,11 +137,47 @@ pre{
 #left{
 	right: 3vh;
 	transform: rotate(20deg);
+    animation: arms-left 5s linear infinite;
 }
 
 #right{
 	left: 7vh;
 	transform: rotate(-20deg);
+    animation: arms-right 5s linear infinite;
+}
+
+
+@keyframes eyes-onoff{
+  0%, 5%{
+  	top: 2.5vh;
+	height: 0.5vh;
+  }
+  6%{
+  	top: 3vh;
+	height: 2vh;
+  }
+}
+
+@keyframes arms-left{
+  20%, 25%,30%, 35%{
+	top : 1.5vh;
+	transform: rotate(30deg);
+  }
+  26%, 29%, 36%, 100%, 19%{
+	top : 2vh;
+	transform: rotate(20deg);
+  }
+}
+
+@keyframes arms-right{
+  20%, 25%,30%, 35%{
+	top : 1.5vh;
+	transform: rotate(-30deg);
+  }
+  26%, 29%, 36%, 100%, 19%{
+	top : 2vh;
+	transform: rotate(-20deg);
+  }
 }
 
 .moon{
