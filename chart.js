@@ -62,8 +62,8 @@ function drawChart() {
     var data4 = google.visualization.arrayToDataTable([
         ['Task', 'Hours per Day'],
         ['1-2회', 36],
-        ['3-4회', 39],
         ['5회 이상', 30],
+        ['3-4회', 39],
         ['상관없음', 6],
     ]);
 
@@ -82,8 +82,8 @@ function drawChart() {
     var data5 = google.visualization.arrayToDataTable([
         ['Task', 'Hours per Day'],
         ['체력이 증진되었다.', 22],
-        ['이전과 비슷하다.', 59],
         ['체력이 저하되었다.', 30],
+        ['이전과 비슷하다.', 59],
     ]);
 
     var options5 = {

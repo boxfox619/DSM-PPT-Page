@@ -2,24 +2,20 @@ $(document).ready(function() {
     var page = 1;
     var carts8 = 0;
     var carts9 = 0;
+    var carts11 = 0;
 
     var numOfPage = $(".views").length;
 
     $("body").keypress(function(e) {
         if (e.keyCode == 50) {
             if (page < numOfPage) {
-<<<<<<< HEAD
-                if(page==8&&carts8<1){
+                if(page==5&&carts8<1){
                     $('#building').animate({left: '40%'}, 1000);
                     $('#runner').animate({left: '40%'}, 1000);
                     $('#text-double').animate({left: '60vh'}, 1000);
                     carts8++;
-                }else if(page==9&&carts9<5){
-                    switch(carts9){
-=======
-                if (page == 9 && carts9 < 5) {
+                }else if(page == 8 && carts9 < 5) {
                     switch (carts9) {
->>>>>>> ce075495aa6e19fd53046a10ed6d3fbd90bb6385
                         case 0:
                             $('#piechart1').animate({
                                 left: '20vh',
@@ -43,23 +39,26 @@ $(document).ready(function() {
                             break;
                         case 3:
                             $('#piechart4').animate({
-                                left: '50vh',
+                                left: '40vh',
                                 top: '42vh'
                             }, 1000);
                             $('#piechart4').find('svg rect:eq( 1 )').attr('fill-opacity', '0.0');
                             break;
                         case 4:
                             $('#piechart5').animate({
-                                left: '105vh',
+                                left: '90vh',
                                 top: '42vh'
                             }, 1000);
                             $('#piechart5').find('svg rect:eq( 1 )').attr('fill-opacity', '0.0');
                             break;
                     }
                     carts9++;
+                } else if(page==11&&carts11==0){
+                    dailyMissionTimer(0.20);
+                    carts11++;
                 } else {
                     page++;
-                    if (page == 5) {
+                    if (page == 4) {
                         $('#running-man').addClass('stick-moving');
                     }
                     if (this.hash !== "") {
@@ -67,7 +66,7 @@ $(document).ready(function() {
                             scrollTop: $('#' + page).offset().top
                         }, 500, function() {console.log(page);});
                     }
-                    if (page == 7) {
+                    if (page == 5) {
                         setTimeout(function() {
                             $('.property').toggleClass('build');
                         }, 1000);
@@ -90,3 +89,26 @@ $(document).ready(function() {
         }
     });
 });
+
+
+function dailyMissionTimer(duration) {
+    
+    var timer = duration * 3600;
+    var minutes, seconds;
+    
+    var interval = setInterval(function(){
+        minutes = parseInt(timer / 60 % 60, 10);
+        seconds = parseInt(timer % 60, 10);
+        
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        
+        $('#time-min').text(minutes);
+        $('#time-sec').text(seconds);
+
+        if (--timer < 0) {
+            timer = 0;
+            clearInterval(interval);
+        }
+    }, 1000);
+}
