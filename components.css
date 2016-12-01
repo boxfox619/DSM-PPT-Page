@@ -42,7 +42,7 @@
 }
 
 .stick .right{
-  z-index: 1 ;   
+  z-index: 1 ;
 }
 
 .stick .head{
@@ -458,3 +458,7 @@
 }
 
 .build .bushes { bottom: -0.75em; }
+
+.title h3{
+    margin: 0;
+}

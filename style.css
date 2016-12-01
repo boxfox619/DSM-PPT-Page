@@ -178,3 +178,8 @@ pre{
 			left:50px;
 			border-radius:50%;
 }
+
+.piecharts{
+	position: relative;
+	left: 10%;
+}

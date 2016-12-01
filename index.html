@@ -2,10 +2,24 @@
 <html>
 
 <head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="components.css">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src=" https://www.google.com/jsapi"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="chart.js"></script>
+	<!--D3.js css-->
+	<style type="text/css">
+		.slice text {
+			font-size: 16pt;
+			font-family: Arial;
+		}
+	</style>
+
 </head>
 
 <body>
@@ -16,118 +30,154 @@
 				<a style="color: #0078C2;" class="title-pice">D</a>
 				<a style="color: #F89C2B;" class="title-pice">S</a>
 				<a style="color: #CC2333;" class="title-pice">M</a> 전체회의!</div>
-				<div class="title-sub">아침운동</div>
+			<div class="title-sub">아침운동</div>
 
-				<div class="snow-ground">
-					<div class="snowman">
-						<div class="snowman-head">
-							<div class="snowman-eyes">
-							</div>
-							<div class="snowman-eyes right">
-							</div>
-							<div class="carrot">
-							</div>
+			<div class="snow-ground">
+				<div class="snowman">
+					<div class="snowman-head">
+						<div class="snowman-eyes">
 						</div>
-						<div class="snowman-body">
-							<div class="snowman-branch" id="left">
-							</div>
-							<div class="snowman-branch" id="right">
-							</div>
+						<div class="snowman-eyes right">
+						</div>
+						<div class="carrot">
+						</div>
+					</div>
+					<div class="snowman-body">
+						<div class="snowman-branch" id="left">
+						</div>
+						<div class="snowman-branch" id="right">
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<div id="2" class="title views">
-			<br>
-			<h1>Contens</h1>
-			<pre>
-				· 회의 배경
-				· 진행 순서
+	<div id="2" class="title views">
+		<br>
+		<h1>Contens</h1>
+		<pre>
+· 회의 배경
+· 현재 상황
+· 회의 목적
+·
 			</pre>
-		</div>
+	</div>
 
-		<div id="3" class="title views">
-			<div style="padding-top: calc(50vh - 1.5rem);">우리가 왜 모였는가?</div>
-		</div>
+	<div id="3" class="title views">
+		<div style="padding-top: calc(50vh - 1.5rem);">우리가 왜 모였는가?</div>
+	</div>
 
-		<div id="4" class="title views">
-			<div style="padding-top: 30vh;">2017년, 아침운동은 뭘까?<br><br>축구?<br>야구?<br>검도?</div>
-		</div>
+	<div id="4" class="title views">
+		<div style="padding-top: 30vh;">2017년, 아침운동은 뭘까?<br><br>축구?<br>야구?<br>검도?</div>
+	</div>
 
-		<div id="5" class="title views">
-			<div class="world">
-				<div id="running-man" class="stick">
-					<div class="head"></div>
-					<div class="arm">
-						<div class="left">
-							<div class="bottom"></div></div>
-							<div class="right">
-								<div class="bottom"></div></div>
-							</div>
-							<div class="leg">
-								<div class="left">
-									<div class="bottom"></div></div>
-									<div class="right">
-										<div class="bottom"></div></div>
-									</div>
-
-								</div>
-							</div>
-							<div style="padding-top : 16vh">
-								우리는 내년에 달리기를 할 가능성이 높습니다.
-							</div>
-						</div>
-
-						<div id="6" class="title views">
-							<div style="padding-top : 40vh">
-								- 적극적으로 의견 제시 <br>
-								- 아침운동을 하지 않는것은 불가능<br>
-								- 의견을 뒷받침 할 수 있는 근거제시
-							</div>
-						</div>
-						<div id = "7" class="title views">
-
-							<div class="property build">
-								<div class="building" style="width: 65%; height: 9em;">
-									<div class="window"></div>
-									<div class="window"></div>
-									<div class="window"></div>
-									<div class="window"></div>
-									<div class="window"></div>
-									<div class="window"></div>
-									<div class="window"></div>
-								</div>
-								<div class="building">
-									<div class="window"></div>
-									<div class="window"></div>
-									<div class="window"></div>
-									<div class="window"></div>
-									<div class="window"></div>
-									<div class="window"></div>
-									<div class="window"></div>
-									<div class="window"></div>
-									<div class="awning" style="padding-bottom: 5px; text-align:left;"><center><div style="margin-bottom: 5px; font-weight: bold;">
-										<span style="color:red;">D</span>
-										<span style="color:blue;">S</span>
-										<span style="color:orange;">M</span>
-									</div></center>
-								</div>
-								<div class="store-front">
-									<div class="door"></div>
-								</div>
-							</div>
-							<div class="tree" style="left:103%;"></div>
-							<div class="bushes" style="left:90%;"></div>
-							<div class="bushes" style="left:98%;"></div>
-							<div class="bushes"></div>
-							<div class="tree"></div>
-							<div class="tree"></div>
-						</div>
-
+	<div id="5" class="title views">
+		<div class="world">
+			<div id="running-man" class="stick">
+				<div class="head"></div>
+				<div class="arm">
+					<div class="left">
+						<div class="bottom"></div>
 					</div>
-				</body>
-				<script type="text/javascript" src="snow.js"></script>
+					<div class="right">
+						<div class="bottom"></div>
+					</div>
+				</div>
+				<div class="leg">
+					<div class="left">
+						<div class="bottom"></div>
+					</div>
+					<div class="right">
+						<div class="bottom"></div>
+					</div>
+				</div>
 
-				</html>
+			</div>
+		</div>
+		<div style="padding-top : 16vh">
+			우리는 내년에 달리기를 할 가능성이 높습니다.
+		</div>
+	</div>
+
+	<div id="6" class="title views">
+		<div style="padding-top : 40vh">
+			- 적극적으로 의견 제시 <br> - 아침운동을 하지 않는것은 불가능<br> - 의견을 뒷받침 할 수 있는 근거제시
+		</div>
+	</div>
+	<div id="7" class="title views">
+
+		<h3 style="padding-top : 25%;">사감부 주장과 자치회 주장</h3>
+
+	</div>
+	<div id="8" class="title views">
+
+		<div class="property build">
+			<div class="building" style="width: 65%; height: 9em;">
+				<div class="window"></div>
+				<div class="window"></div>
+				<div class="window"></div>
+				<div class="window"></div>
+				<div class="window"></div>
+				<div class="window"></div>
+				<div class="window"></div>
+			</div>
+			<div class="building">
+				<div class="window"></div>
+				<div class="window"></div>
+				<div class="window"></div>
+				<div class="window"></div>
+				<div class="window"></div>
+				<div class="window"></div>
+				<div class="window"></div>
+				<div class="window"></div>
+				<div class="awning" style="padding-bottom: 5px; text-align:left;">
+					<center>
+						<div style="margin-bottom: 5px; font-weight: bold;">
+							<span style="color:red;">D</span>
+							<span style="color:blue;">S</span>
+							<span style="color:orange;">M</span>
+						</div>
+					</center>
+				</div>
+				<div class="store-front">
+					<div class="door"></div>
+				</div>
+			</div>
+			<div class="tree" style="left:103%;"></div>
+			<div class="bushes" style="left:90%;"></div>
+			<div class="bushes" style="left:98%;"></div>
+			<div class="bushes"></div>
+			<div class="tree"></div>
+			<div class="tree"></div>
+		</div>
+	</div>
+
+	<div id="9" class="title views">
+		<div class="col-md-6">
+			<div id="piechart1" style="width: 100vw; height: 100vh;" class="piecharts">
+			</div>
+		</div>
+	</div>
+	<div id="10" class="title views">
+		<div id="piechart2" style="width: 100vw; height: 100vh;" class="piecharts">
+		</div>
+	</div>
+	<div id="11" class="title views">
+		<div id="piechart3" style="width: 100vw; height: 100vh;" class="piecharts">
+		</div>
+	</div>
+
+	<div id="12" class="title views">
+		<div id="piechart4" style="width: 100vw; height: 100vh;" class="piecharts">
+		</div>
+	</div>
+
+	<div id="13" class="title views">
+		<div id="piechart5" style="width: 100vw; height: 100vh;" class="piecharts">
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="snow.js"></script>
+
+</html>
